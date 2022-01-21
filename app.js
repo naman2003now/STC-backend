@@ -18,7 +18,6 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
     let sumOfNumbers = parseInt(req.body.firstNumber) + parseInt(req.body.secondNumber) + parseInt(req.body.thirdNumber)
     let average = sumOfNumbers / 3
-    console.log("I've come here")
     res.render("result", {result: "Average: " + average})
 })
 
