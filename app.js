@@ -3,6 +3,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 
 const app = express()
+const port = process.env.PORT || 6969
 app.set("views", "./public")
 app.set("view engine", "ejs")
 
@@ -26,6 +27,6 @@ app.get("/:name", (req, res) => {
     res.render("result", {result: "Name: " + req.params.name})
 })
 
-app.listen(6969, () => {
-    console.log("Listening at port 6969")
+app.listen(port, () => {
+    console.log("Listening at port" + port)
 })
